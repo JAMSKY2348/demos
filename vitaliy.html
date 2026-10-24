@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#17191a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ff6a13'/%3E%3Cpath d='M14 44h30v-8H30l-6-10H14z' fill='%2317191a'/%3E%3Ccircle cx='22' cy='46' r='5' fill='%2317191a'/%3E%3Ccircle cx='40' cy='46' r='5' fill='%2317191a'/%3E%3C/svg%3E">
+<title>Аренда спецтехники</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#17191a;--mut:#6c6e6d;--line:#e6e4de;--or:#ff6a13;--or-d:#e85a05;--dk:#1a1d1f;--ok:#1f7a45;--bad:#b3402d;--warn:#a86a00;--f:"Onest",system-ui,Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--f)}
+.in{max-width:1120px;margin:0 auto;padding:0 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:700 15px var(--f);padding:12px 18px;border:2px solid var(--or);border-radius:12px;cursor:pointer;background:var(--or);color:#17191a}
+.btn:hover{background:var(--or-d);border-color:var(--or-d)}
+.btn.line{background:#fff;color:var(--ink);border-color:var(--line)}.btn.line:hover{border-color:var(--ink)}
+.btn.ghost{background:transparent;color:#f3f1ea;border-color:#ffffff66}.btn.ghost:hover{background:#ffffff1a}
+.btn[aria-disabled="true"]{background:#f3c9ad;border-color:#f3c9ad;pointer-events:none}
+.btn:focus-visible,.fc:focus-visible,.seg button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.top{position:sticky;top:0;z-index:10;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .in{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;margin-right:auto;min-width:0}
+.logo i{flex:none;width:36px;height:36px;border-radius:10px;background:var(--dk);color:var(--or);display:grid;place-items:center;font-style:normal;font-weight:800}
+.logo div{min-width:0}.logo span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.logo small{display:block;font-weight:400;font-size:12px;color:var(--mut)}
+.top .btn{padding:9px 14px;font-size:14px;white-space:nowrap}
+@media(max-width:560px){#calcTop{display:none}.logo small{display:none}.top .btn{padding:9px 12px}}
+.demo{background:var(--dk);color:#ffc9a3;font-size:13px;text-align:center;padding:7px 12px}
+.hero{margin-top:20px;border-radius:26px;background:var(--dk);color:#f3f1ea;padding:34px 26px;position:relative;overflow:hidden}
+@media(min-width:860px){.hero{padding:56px}}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(#ff6a1355,transparent 70%)}
+.kick{color:#ffc9a3;font-weight:600;font-size:14px;margin:0 0 14px}
+h1{font-size:clamp(32px,6vw,56px);line-height:1.03;letter-spacing:-.03em;font-weight:800;margin:0 0 14px;max-width:16ch}h1 em{font-style:normal;color:var(--or)}
+.lead{color:#c4c2ba;font-size:17px;max-width:44ch;margin:0 0 22px}.cta{display:flex;gap:10px;flex-wrap:wrap}
+h2{font-size:clamp(24px,4vw,34px);letter-spacing:-.02em;margin:44px 0 16px;line-height:1.1}
+.fleet{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+@media(min-width:620px){.fleet{grid-template-columns:repeat(2,1fr)}}@media(min-width:980px){.fleet{grid-template-columns:repeat(3,1fr)}}
+.fc{background:var(--card);border:2px solid var(--line);border-radius:22px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;width:100%;text-align:left;font:inherit;color:inherit;padding:0}
+.fc:hover{border-color:#bdbab0}.fc[aria-pressed="true"]{border-color:var(--or);box-shadow:0 0 0 4px #ff6a1326}.fc:disabled{cursor:not-allowed}
+.pic{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#2a2d30,#14171a);display:grid;place-items:center;color:var(--or);font:800 26px/1.1 var(--f);padding:14px;text-align:center}
+.solo{grid-template-columns:1fr!important;max-width:720px;margin:0 auto}.solo .pic{aspect-ratio:4/5;font-size:34px}@media(min-width:620px){.solo .pic{aspect-ratio:3/2}}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.fc:disabled .pic{filter:grayscale(1);opacity:.6}
+.chip{position:absolute;left:12px;top:12px;z-index:2;background:#fff;border-radius:999px;padding:4px 12px;font:700 13px var(--f);color:var(--ink)}
+.chip.free{color:var(--ok)}.chip.busy{color:var(--bad)}.chip.pending{color:var(--warn)}
+.cb{padding:14px 16px 16px}.nm{font-weight:800;font-size:19px}.ds{color:var(--mut);font-size:14px;margin:2px 0 10px;white-space:pre-line;overflow-wrap:anywhere}textarea.dsc{min-height:110px;resize:vertical;font:inherit;width:100%}
+.pr{font-weight:800;font-size:22px}.pr small{font-weight:400;font-size:13px;color:var(--mut)}
+.modal{position:fixed;inset:0;z-index:40;background:#000a;display:flex;align-items:flex-end;justify-content:center;padding-top:env(safe-area-inset-top,0px)}
+.sheet{background:var(--card);width:100%;max-width:860px;max-height:94vh;overflow:auto;border-radius:24px 24px 0 0;padding:22px 18px calc(24px + env(safe-area-inset-bottom,0px));position:relative}
+@media(min-width:760px){.modal{align-items:center;padding:24px}.sheet{border-radius:24px;padding:30px 32px 32px}}
+.sheet h2{margin:0 36px 16px 0;font-size:clamp(22px,4vw,28px)}.x{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:50%;border:0;background:var(--bg);color:var(--ink);font:400 26px/1 var(--f);cursor:pointer}.x:focus-visible{outline:3px solid var(--ink)}
+.order{display:grid;gap:22px}
+@media(min-width:760px){.order{grid-template-columns:1.2fr 1fr;gap:32px}}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 5px}label:first-child{margin-top:0}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px}
+textarea{min-height:76px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none;border-color:var(--or);box-shadow:0 0 0 3px #ff6a1333}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.two>div{min-width:0}
+input[type=date],input[type=time]{min-width:0;max-width:100%;display:block;-webkit-appearance:none;appearance:none;text-align:left;min-height:48px}
+.sum{background:var(--bg);border-radius:18px;padding:20px;align-self:start}
+.sum .w{color:var(--mut)}.sum b{display:block;font-size:42px;letter-spacing:-.03em;line-height:1.1;margin:4px 0 6px}
+.hint{color:var(--mut);font-size:14px;margin:0 0 14px}.err{color:var(--bad);font-size:14px;min-height:20px;margin:0 0 10px}
+.sum .btn{width:100%;padding:15px;font-size:17px}
+details{margin-top:12px}summary{cursor:pointer;color:var(--mut);font-size:14px}
+.sum textarea{background:#fff;font-size:14px;min-height:130px}
+.copy{margin-top:6px;background:none;border:0;font:600 14px var(--f);color:var(--mut);text-decoration:underline;cursor:pointer}
+footer{background:var(--dk);color:#c4c2ba;margin-top:56px;padding:28px 0 36px;font-size:14px}
+footer .in{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+footer b{color:#fff;font-size:18px;display:block}footer a{color:#7ecbff;text-decoration:none}footer a.own{color:#fff;border-bottom:1px solid #ffffff55}
+footer .fine{width:100%;color:#8c8a82;font-size:12px}
+/* owner panel */
+.own-h{display:flex;align-items:center;gap:12px;margin:22px 0 6px;flex-wrap:wrap}.own-h h1{font-size:clamp(28px,5vw,40px);color:var(--ink);margin:0;max-width:none}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px}.stat b{font-size:28px;display:block;line-height:1.1}.stat span{color:var(--mut);font-size:13px}
+.pg{display:grid;gap:16px}@media(min-width:760px){.pg{grid-template-columns:repeat(2,1fr)}}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px}
+.pc .hd{display:flex;gap:12px;align-items:center;margin-bottom:6px}.pc .th{flex:none;width:64px;height:64px;border-radius:14px;background:var(--dk);overflow:hidden;position:relative;color:var(--or);display:grid;place-items:center;font-weight:800}
+.pc .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.seg button{font:600 13px var(--f);padding:10px 6px;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"].free{background:#e4f6ec;border-color:var(--ok);color:var(--ok)}.seg button[aria-pressed="true"].busy{background:var(--dk);border-color:var(--dk);color:#fff}.seg button[aria-pressed="true"].pending{background:#fff3d9;border-color:var(--warn);color:var(--warn)}
+.bk{display:grid;gap:6px;margin-bottom:8px}.bkr{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--bg);border-radius:10px;padding:8px 12px;font-size:14px}.bkx{background:none;border:0;font:400 20px/1 var(--f);color:var(--bad);cursor:pointer;padding:0 4px}
+.rm{background:none;border:0;color:var(--bad);font:600 13px var(--f);cursor:pointer;margin-top:10px;padding:0;text-decoration:underline}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.note{color:var(--mut);font-size:14px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--dk);color:#fff;padding:10px 18px;border-radius:999px;font-size:14px;z-index:30}
+</style></head><body>
+<div class="demo" id="demo">Демо-версия: показывает, как будет работать ваша страница</div>
+<div id="client">
+<div class="top"><div class="in">
+ <div class="logo"><i id="mark"></i><div><span id="co"></span><small id="svc"></small></div></div>
+ <a class="btn line" href="#fleet" id="calcTop">Рассчитать</a>
+ <a class="btn" id="contactTop" href="#" target="_blank" rel="noopener"></a>
+</div></div>
+<main class="in">
+ <section class="hero"><p class="kick" id="kick"></p><h1 id="h1"></h1><p class="lead" id="lead"></p>
+  <div class="cta"><a class="btn" href="#fleet">Выбрать технику ↓</a><a class="btn ghost" id="contactHero" href="#" target="_blank" rel="noopener"></a></div></section>
+ <h2 id="fleet">Наша техника</h2>
+ <ul class="fleet" id="fl"></ul>
+</main>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mtitle"><div class="sheet"><button class="x" id="mx" type="button" aria-label="Закрыть">×</button><h2 id="mtitle"></h2>
+ <section class="order" id="order">
+  <div>
+   <label for="mach">Техника</label><select id="mach"></select>
+   <label for="addr">Адрес объекта</label><input id="addr" autocomplete="street-address" placeholder="Населённый пункт, улица, дом">
+   <div class="two"><div><label for="date">Дата начала</label><input id="date" type="date"></div><div><label for="time">Время</label><input id="time" type="time" value="09:00"></div></div>
+   <div class="two"><div><label for="hours">Часов аренды</label><input id="hours" type="number" inputmode="numeric" min="1" max="72" value="4"></div><div><label for="zone">Зона доставки</label><select id="zone"></select></div></div>
+   <label for="cm">Комментарий</label><textarea id="cm" placeholder="Например: нужно подготовить площадку под фундамент"></textarea>
+   <div class="two"><div><label for="cname">Имя</label><input id="cname" autocomplete="name"></div><div><label for="phone">Телефон <small>(необязательно)</small></label><input id="phone" type="tel" autocomplete="tel" placeholder="+380…"></div></div>
+  </div>
+  <div class="sum"><span class="w" id="what"></span><b id="sum">—</b><p class="hint" id="brk"></p><p class="err" id="err" role="alert"></p>
+   <a class="btn" id="send" href="#" target="_blank" rel="noopener" aria-disabled="true"></a>
+   <details><summary>Текст заявки</summary><textarea id="msg" readonly aria-label="Текст заявки"></textarea><button class="copy" id="copy" type="button">Скопировать</button></details></div>
+ </section>
+</div></div>
+<footer><div class="in"><div><b id="fco"></b><span id="fcity"></span></div><div><a id="fc" href="#" target="_blank" rel="noopener"></a></div><a class="own" href="#owner">Панель владельца ↗</a><div class="fine" id="fine"></div></div></footer>
+</div>
+<div id="owner" hidden>
+<div class="top"><div class="in"><div class="logo"><i id="omark"></i><div><span id="oco"></span><small>Панель владельца</small></div></div><a class="btn line" href="#">← Клиентская страница</a></div></div>
+<main class="in">
+ <div class="own-h"><h1>Рабочий кабинет</h1></div>
+ <p class="note">Обновляйте стоимость, доступность техники и контакт для заявок. В демо изменения сохраняются только на этом устройстве.</p>
+ <div class="stats"><div class="stat"><b id="s1">0</b><span>Свободны</span></div><div class="stat"><b id="s2">0</b><span>Заняты</span></div><div class="stat"><b id="s3">0</b><span>Нужно подтверждение</span></div></div>
+ <h2 style="margin-top:8px">Настройки техники</h2>
+ <div class="pg" id="pg"></div>
+ <div class="bar"><button class="btn" id="add" type="button">+ Добавить технику</button><button class="btn line" id="reset" type="button">Сбросить демо-данные</button></div>
+ <h2>Контакт для заявок</h2>
+ <div class="pc" style="max-width:520px"><label for="otg">Telegram (без @)</label><input id="otg"></div>
+</main>
+</div>
+<script type="application/json" id="cfg">{"lang": "uk", "key": "vitaliy", "company": "Оренда крана й екскаватора", "city": "Харків", "telegram": "", "currency": "грн", "headline": "Кран і екскаватор", "tail": "в Харкові", "machines": [{"name": "Кран-маніпулятор", "desc": "Перевезення та розвантаження вантажів, монтажні роботи", "rate": 1800, "minHours": 3, "status": "free"}, {"name": "Автокран 10 т", "desc": "Підйомні та монтажні роботи на об'єкті", "rate": 1500, "minHours": 4, "status": "free"}, {"name": "Автокран 16 т", "desc": "Підйомні та монтажні роботи на об'єкті", "rate": 1700, "minHours": 4, "status": "free"}, {"name": "Автокран 18 т", "desc": "Підйомні та монтажні роботи на об'єкті", "rate": 1900, "minHours": 4, "status": "free"}, {"name": "Автокран 25 т", "desc": "Підйомні та монтажні роботи на об'єкті", "rate": 2300, "minHours": 4, "status": "free"}, {"name": "Автокран 50 т", "desc": "Підйомні та монтажні роботи на об'єкті", "rate": 3500, "minHours": 4, "status": "free"}, {"name": "Екскаватор-навантажувач JCB 3CX з гідромолотом", "desc": "Ковші 40–120 см, гідромолот, навантажувач. Працюємо з ПДВ", "rate": 1500, "minHours": 4, "status": "free"}], "zones": [{"name": "По Харкову", "fee": 0}, {"name": "Приміська зона до 20 км", "fee": 500}, {"name": "Область до 60 км", "fee": 1200}]}</script>
+<script>
+const BASE=JSON.parse(document.getElementById("cfg").textContent);
+const $=id=>document.getElementById(id),KEY="spec2_"+(BASE.key||BASE.company);
+const ST={};
+const U={"Демо-версия: показывает, как будет работать ваша страница": "Демо-версія: показує, як працюватиме ваша сторінка", "Рассчитать": "Розрахувати", "Выбрать технику ↓": "Обрати техніку ↓", "Наша техника": "Наша техніка", "Рассчитайте и отправьте заявку": "Розрахуйте та надішліть заявку", "Техника": "Техніка", "Адрес объекта": "Адреса об'єкта", "Дата начала": "Дата початку", "Время": "Час", "Часов аренды": "Годин оренди", "Зона доставки": "Зона доставки", "Комментарий": "Коментар", "Имя": "Ім'я", "Населённый пункт, улица, дом": "Населений пункт, вулиця, будинок", "Например: нужно подготовить площадку под фундамент": "Наприклад: потрібно підготувати майданчик під фундамент", "Текст заявки": "Текст заявки", "Скопировать": "Скопіювати", "Панель владельца ↗": "Панель власника ↗", "← Клиентская страница": "← Клієнтська сторінка", "Панель владельца": "Панель власника", "Рабочий кабинет": "Робочий кабінет", "Обновляйте стоимость, доступность техники и контакт для заявок. В демо изменения сохраняются только на этом устройстве.": "Оновлюйте вартість, доступність техніки та контакт для заявок. У демо зміни зберігаються лише на цьому пристрої.", "Свободны": "Вільні", "Заняты": "Зайняті", "Нужно подтверждение": "Потрібне підтвердження", "Настройки техники": "Налаштування техніки", "+ Добавить технику": "+ Додати техніку", "Сбросить демо-данные": "Скинути демо-дані", "Контакт для заявок": "Контакт для заявок", "Свободна": "Вільна", "Занята": "Зайнята", "Написать в Telegram": "Написати в Telegram", "Позвонить": "Зателефонувати", "Выберите технику, укажите адрес и дату — заявка уйдёт владельцу сразу с расчётом стоимости.": "Оберіть техніку, вкажіть адресу та дату — заявка піде власнику одразу з розрахунком вартості.", "Аренда спецтехники": "Оренда спецтехніки", "с подачей на объект": "з подачею на об'єкт", "Демо-страница, подготовленная для «": "Демо-сторінка, підготовлена для «", "». Цены и контакты можно заменить. В демо панель владельца сохраняет изменения только на этом устройстве.": "». Ціни та контакти можна замінити. У демо панель власника зберігає зміни лише на цьому пристрої.", " / час · от ": " / год · від ", " ч": " год", "Нет свободной техники": "Немає вільної техніки", "Сейчас вся техника занята, позвоните владельцу.": "Зараз уся техніка зайнята, зателефонуйте власнику.", " ч × ": " год × ", " + доставка ": " + доставка ", ". Окончательную цену подтвердит владелец.": ". Остаточну ціну підтвердить власник.", "Заявка: ": "Заявка: ", "Часов: ": "Годин: ", "Адрес: ": "Адреса: ", "Комментарий: ": "Коментар: ", "Предварительно: ": "Попередньо: ", "Клиент: ": "Клієнт: ", "уточнить": "уточнити", "Укажите дату.": "Вкажіть дату.", "Укажите адрес объекта.": "Вкажіть адресу об'єкта.", "Минимум для этой техники — ": "Мінімум для цієї техніки — ", " ч.": " год.", "Укажите телефон.": "Вкажіть телефон.", "Отправить заявку в Telegram": "Надіслати заявку в Telegram", "Скопировать заявку": "Скопіювати заявку","Опишите технику: высота подъёма, вылет, грузоподъёмность, условия, что входит в цену…":"Опишіть техніку: висота підйому, виліт, вантажопідйомність, умови, що входить у ціну…","(необязательно)":"(необов'язково)","Позвонить владельцу": "Зателефонувати власнику", "Контакт не указан": "Контакт не вказано", "Скопировано": "Скопійовано", "Выделено, скопируйте вручную": "Виділено, скопіюйте вручну", "Название": "Назва", "Цена за час, ": "Ціна за годину, ", "Минимальная смена, ч": "Мінімальна зміна, год", "Описание": "Опис", "Фото (ссылка)": "Фото (посилання)", "Статус техники": "Статус техніки", "Удалить технику": "Видалити техніку", "Новая техника": "Нова техніка", "Сохранено на этом устройстве (демо)": "Збережено на цьому пристрої (демо)", " — занята": " — зайнята", "Дата: ": "Дата: ", "Зона: ": "Зона: ","Закрыть": "Закрити","Занятость (записи)":"Зайнятість (записи)","Нет записей":"Немає записів","Добавить запись":"Додати запис","Заметка":"Нотатка","Техника занята в эту дату. Выберите другую дату.":"Техніка зайнята в цю дату. Оберіть іншу дату.","Занята до ":"Зайнята до ","Записи: ":"Записи: ","С даты":"З дати","По дату":"По дату","Удалить":"Видалити"};
+const L=BASE.lang==="uk",_t=x=>L&&U[x]?U[x]:x;
+if(L)document.documentElement.lang="uk";
+let C=JSON.parse(JSON.stringify(BASE)),sel=null;
+try{const o=JSON.parse(localStorage.getItem(KEY)||"null");if(o){C.machines=o.machines||C.machines;C.telegram=o.telegram??C.telegram;C.phone=o.phone??C.phone;}}catch(e){}
+C.machines.forEach((m,i)=>{m.id=m.id||("m"+i);m.status=m.status||"free";m.minHours=m.minHours||1;m.bookings=m.bookings||[];});
+function initST(){ST.free=_t("Свободна");ST.busy=_t("Занята");ST.pending=_t("Нужно подтверждение");}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({machines:C.machines,telegram:C.telegram,phone:C.phone}));}catch(e){}toast(_t("Сохранено на этом устройстве (демо)"));}
+let tt;function toast(t){let e=document.querySelector(".toast");if(!e){e=document.createElement("div");e.className="toast";document.body.appendChild(e);}e.textContent=t;e.hidden=false;clearTimeout(tt);tt=setTimeout(()=>e.hidden=true,1800);}
+const h=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;};
+const cur=C.currency||"грн",fmt=n=>n.toLocaleString("ru-RU")+" "+cur,fd=s=>s?s.split("-").reverse().join("."):"";
+function drv(u){const m=String(u).match(/drive\.google\.com\/file\/d\/([\w-]+)/)||String(u).match(/drive\.google\.com\/(?:open|uc)\?(?:[^#]*&)?id=([\w-]+)/);return m?m[1]:null;}
+function photo(box,src){if(!src)return;const id=drv(src),i=document.createElement("img");i.alt="";i.loading="lazy";let s=0;i.onerror=()=>{if(id&&!s){s=1;i.src="https://lh3.googleusercontent.com/d/"+id+"=w1200";return;}i.remove();};i.src=id?"https://drive.google.com/thumbnail?id="+id+"&sz=w1200":src;box.appendChild(i);}
+const tg=()=>(C.telegram||"").replace(/^@/,""),tel=()=>(C.phone||"").replace(/[^\d+]/g,"");
+function contact(a,cls){const t=tg(),p=tel();if(t){a.href="https://t.me/"+t;a.textContent=_t("Написать в Telegram");a.target="_blank";a.hidden=false;}else a.hidden=true;}
+function tr(root){if(!L)return;const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const v=n.nodeValue.trim();if(v&&U[v])n.nodeValue=n.nodeValue.replace(v,U[v]);}
+ root.querySelectorAll("[placeholder],[aria-label]").forEach(e=>{["placeholder","aria-label"].forEach(a=>{const v=e.getAttribute(a);if(v&&U[v])e.setAttribute(a,U[v]);});});}
+initST();tr(document.body);
+/* ---------- client ---------- */
+document.title=C.company+" — "+C.city;
+$("co").textContent=C.company;$("svc").textContent=C.service||_t("Аренда спецтехники");$("mark").textContent=(C.company||"С")[0].toUpperCase();$("omark").textContent=$("mark").textContent;$("oco").textContent=C.company;
+$("kick").textContent=C.city;$("h1").textContent="";$("h1").append((C.headline||_t("Аренда спецтехники"))+" ");const em=h("em","",C.tail||_t("с подачей на объект"));$("h1").appendChild(em);
+$("lead").textContent=C.lead||_t("Выберите технику, укажите адрес и дату — заявка уйдёт владельцу сразу с расчётом стоимости.");
+$("fco").textContent=C.company;$("fcity").textContent=C.city;
+$("fine").textContent=_t("Демо-страница, подготовленная для «")+C.company+_t("». Цены и контакты можно заменить. В демо панель владельца сохраняет изменения только на этом устройстве.");
+const tzone=C.zones&&C.zones.length?C.zones:[{name:"По городу",fee:0}];
+tzone.forEach((z,i)=>{const o=h("option","",z.name+(z.fee?" (+"+fmt(z.fee)+")":""));o.value=i;$("zone").appendChild(o);});
+const t0=new Date();t0.setMinutes(t0.getMinutes()-t0.getTimezoneOffset());$("date").min=t0.toISOString().slice(0,10);
+const TODAY=t0.toISOString().slice(0,10),dm=s=>s.slice(8,10)+"."+s.slice(5,7);
+const bookedOn=(m,d)=>d&&(m.bookings||[]).some(b=>b.from<=d&&d<=b.to);
+const nextB=m=>(m.bookings||[]).filter(b=>b.to>=TODAY).sort((x,y)=>x.from<y.from?-1:1)[0];
+const eff=m=>m.status==="busy"&&(m.bookings||[]).length?"free":m.status,chipS=m=>bookedOn(m,TODAY)?"busy":eff(m);
+function renderFleet(){$("fl").classList.toggle("solo",C.machines.length===1);
+  $("fl").textContent="";$("mach").textContent="";
+  C.machines.forEach(m=>{
+    const li=h("li"),b=h("button","fc");b.type="button";b.setAttribute("aria-pressed",sel===m.id);b.disabled=eff(m)==="busy";
+    const p=h("div","pic",m.name);photo(p,m.photo);p.appendChild(h("span","chip "+chipS(m),ST[chipS(m)]));
+    const cb=h("div","cb");cb.append(h("div","nm",m.name));if(m.desc)cb.appendChild(h("div","ds",m.desc));
+    const nb=nextB(m);if(nb){const bz=h("div","ds",(nb.from<=TODAY?_t("Занята до ")+dm(nb.to):_t("Записи: ")+dm(nb.from)+(nb.to!==nb.from?"–"+dm(nb.to):"")));bz.style.fontWeight="600";cb.appendChild(bz);}
+    const pr=h("div","pr",fmt(m.rate));pr.appendChild(h("small","",m.rate?_t(" / час · от ")+m.minHours+_t(" ч"):""));cb.appendChild(pr);
+    b.append(p,cb);b.onclick=()=>{sel=m.id;renderFleet();openModal();};li.appendChild(b);$("fl").appendChild(li);
+    const o=h("option","",m.name+(eff(m)==="busy"?_t(" — занята"):""));o.value=m.id;o.disabled=eff(m)==="busy";$("mach").appendChild(o);
+  });
+  if(!C.machines.find(m=>m.id===sel&&eff(m)!=="busy")){const f=C.machines.find(m=>eff(m)!=="busy");sel=f?f.id:null;}
+  $("mach").value=sel||"";
+}
+$("mach").onchange=()=>{sel=$("mach").value;renderFleet();update();titleM();};
+function titleM(){const m=C.machines.find(x=>x.id===sel);$("mtitle").textContent=m?_t("Заявка: ")+m.name:"";}
+let lastFocus=null;
+function openModal(){lastFocus=document.activeElement;$("modal").hidden=false;document.body.style.overflow="hidden";$("mach").value=sel||"";titleM();update();setTimeout(()=>$("addr").focus({preventScroll:true}),50);}
+function closeModal(){$("modal").hidden=true;document.body.style.overflow="";if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+$("mx").onclick=closeModal;$("modal").addEventListener("click",e=>{if(e.target===$("modal"))closeModal();});
+addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("modal").hidden)closeModal();});
+$("calcTop").addEventListener("click",e=>{if(C.machines.some(m=>eff(m)!=="busy")){e.preventDefault();openModal();}});
+function update(){
+  const m=C.machines.find(x=>x.id===sel),hours=Math.max(0,parseInt($("hours").value,10)||0),z=tzone[+$("zone").value]||tzone[0];
+  const date=$("date").value,time=$("time").value,addr=$("addr").value.trim(),name=$("cname").value.trim(),phone=$("phone").value.trim(),cm=$("cm").value.trim();
+  if(!m){$("what").textContent=_t("Нет свободной техники");$("sum").textContent="—";$("brk").textContent="";$("err").textContent=_t("Сейчас вся техника занята, позвоните владельцу.");setSend(null);return;}
+  const total=hours*m.rate+(z.fee||0);
+  $("what").textContent=m.name+" × "+hours+_t(" ч");$("sum").textContent=fmt(total);
+  $("brk").textContent=hours+_t(" ч × ")+fmt(m.rate)+(z.fee?_t(" + доставка ")+fmt(z.fee):"")+_t(". Окончательную цену подтвердит владелец.");
+  const text=[_t("Заявка: ")+m.name,_t("Дата: ")+(fd(date)||_t("уточнить"))+(time?", "+time:""),_t("Часов: ")+hours,_t("Зона: ")+z.name,_t("Адрес: ")+(addr||_t("уточнить")),cm?_t("Комментарий: ")+cm:null,_t("Предварительно: ")+fmt(total),_t("Клиент: ")+(name||"—")+", "+(phone||"—")].filter(Boolean).join("\n");
+  $("msg").value=text;
+  let err="";if(!date)err=_t("Укажите дату.");else if(!addr)err=_t("Укажите адрес объекта.");else if(bookedOn(m,date))err=_t("Техника занята в эту дату. Выберите другую дату.");else if(hours<m.minHours)err=_t("Минимум для этой техники — ")+m.minHours+_t(" ч.");
+  $("err").textContent=err;
+  let u=null;if(!err){u=tg()?"https://t.me/"+tg()+"?text="+encodeURIComponent(text):"#";}
+  setSend(u);
+}
+function setSend(u){const a=$("send");a.textContent=tg()?_t("Отправить заявку в Telegram"):_t("Скопировать заявку");if(tg())a.target="_blank";else a.removeAttribute("target");a.href=u||"#";a.setAttribute("aria-disabled",u?"false":"true");}
+["addr","date","time","hours","zone","cm","cname","phone"].forEach(id=>$(id).addEventListener("input",update));
+$("send").addEventListener("click",e=>{if(!tg()){e.preventDefault();if($("send").getAttribute("aria-disabled")!=="true")$("copy").click();}});
+$("copy").onclick=async()=>{const t=$("msg").value;try{await navigator.clipboard.writeText(t);$("copy").textContent=_t("Скопировано");}catch(e){$("msg").select();$("copy").textContent=_t("Выделено, скопируйте вручную");}setTimeout(()=>$("copy").textContent=_t("Скопировать"),2000);};
+function renderContacts(){["contactTop","contactHero","fc"].forEach(id=>contact($(id)));}
+/* ---------- owner ---------- */
+function ownerRender(){
+  const n=s=>C.machines.filter(m=>m.status===s).length;$("s1").textContent=n("free");$("s2").textContent=n("busy");$("s3").textContent=n("pending");
+  $("pg").textContent="";
+  C.machines.forEach(m=>{
+    const c=h("div","pc"),hd=h("div","hd"),th=h("div","th",(m.name||"?")[0]);photo(th,m.photo);const nm=h("input");nm.value=m.name;nm.setAttribute("aria-label",_t("Название"));nm.onchange=()=>{m.name=nm.value.trim()||m.name;save();ownerRender();};hd.append(th,nm);c.appendChild(hd);
+    const r=h("div","two"),a=h("div"),b=h("div");
+    const ir=h("input");ir.type="number";ir.min=0;ir.value=m.rate;ir.onchange=()=>{m.rate=Math.max(0,parseInt(ir.value,10)||0);save();};
+    const im=h("input");im.type="number";im.min=1;im.value=m.minHours;im.onchange=()=>{m.minHours=Math.max(1,parseInt(im.value,10)||1);save();};
+    a.append(h("label","",_t("Цена за час, ")+cur),ir);b.append(h("label","",_t("Минимальная смена, ч")),im);r.append(a,b);c.appendChild(r);
+    c.appendChild(h("label","",_t("Описание")));const id=h("textarea","dsc");id.rows=5;id.maxLength=1500;id.placeholder=_t("Опишите технику: высота подъёма, вылет, грузоподъёмность, условия, что входит в цену…");id.value=m.desc||"";id.onchange=()=>{m.desc=id.value.trim();save();};c.appendChild(id);
+    c.appendChild(h("label","",_t("Фото (ссылка)")));const ip=h("input");ip.value=m.photo||"";ip.placeholder="https://…";ip.onchange=()=>{m.photo=ip.value.trim();save();ownerRender();};c.appendChild(ip);
+    c.appendChild(h("label","",_t("Статус техники")));const sg=h("div","seg");
+    Object.keys(ST).forEach(k=>{const bt=h("button",k,ST[k]);bt.type="button";bt.setAttribute("aria-pressed",m.status===k);bt.onclick=()=>{m.status=k;save();ownerRender();};sg.appendChild(bt);});
+    c.appendChild(sg);
+    c.appendChild(h("label","",_t("Занятость (записи)")));
+    const bl=h("div","bk");const bs=(m.bookings||[]).slice().sort((x,y)=>x.from<y.from?-1:1);
+    if(!bs.length)bl.appendChild(h("div","note",_t("Нет записей")));
+    bs.forEach(b=>{const row=h("div","bkr"),tx=h("span","",dm(b.from)+(b.to!==b.from?" – "+dm(b.to):"")+(b.note?" · "+b.note:"")),x=h("button","bkx","×");x.type="button";x.setAttribute("aria-label",_t("Удалить"));x.onclick=()=>{m.bookings=m.bookings.filter(y=>y!==b);save();ownerRender();};row.append(tx,x);bl.appendChild(row);});
+    c.appendChild(bl);
+    const ar=h("div","two"),f1=h("input"),f2=h("input");f1.type=f2.type="date";f1.min=f2.min=TODAY;f1.setAttribute("aria-label",_t("С даты"));f2.setAttribute("aria-label",_t("По дату"));ar.append(f1,f2);c.appendChild(ar);
+    const nt=h("input");nt.placeholder=_t("Заметка");nt.style.marginTop="8px";c.appendChild(nt);
+    const ab=h("button","btn line",_t("Добавить запись"));ab.type="button";ab.style.cssText="margin-top:8px;width:100%";
+    ab.onclick=()=>{if(!f1.value)return;const to=f2.value&&f2.value>=f1.value?f2.value:f1.value;m.bookings.push({from:f1.value,to:to,note:nt.value.trim()});save();ownerRender();};c.appendChild(ab);const rm=h("button","rm",_t("Удалить технику"));rm.type="button";rm.onclick=()=>{C.machines=C.machines.filter(x=>x!==m);save();ownerRender();};c.appendChild(rm);
+    $("pg").appendChild(c);
+  });
+  $("otg").value=C.telegram||"";
+}
+$("add").onclick=()=>{C.machines.push({id:"m"+Date.now(),name:_t("Новая техника"),desc:"",rate:1000,minHours:4,status:"free",photo:""});save();ownerRender();};
+$("reset").onclick=()=>{try{localStorage.removeItem(KEY);}catch(e){}location.reload();};
+$("otg").onchange=()=>{C.telegram=$("otg").value.trim().replace(/^@/,"");save();};
+let OWN=location.hash==="#owner";
+function route(){const o=OWN;if(o&&!$("modal").hidden)closeModal();$("owner").hidden=!o;$("client").hidden=o;if(o){ownerRender();window.scrollTo(0,0);}else{renderFleet();renderContacts();update();}}
+const go=(v,e)=>{e.preventDefault();OWN=v;try{history.replaceState(null,"",v?"#owner":location.pathname+location.search)}catch(x){}route();};
+document.querySelector("a.own").addEventListener("click",e=>go(true,e));
+document.querySelector("#owner .top a.btn").addEventListener("click",e=>go(false,e));
+addEventListener("hashchange",()=>{OWN=location.hash==="#owner";route();});route();
+</script></body></html>
