@@ -106,7 +106,7 @@ footer .fine{width:100%;color:#8c8a82;font-size:12px}
    <div class="two"><div><label for="cname">Имя</label><input id="cname" autocomplete="name"></div><div><label for="phone">Телефон <small>(необязательно)</small></label><input id="phone" type="tel" autocomplete="tel" placeholder="+380…"></div></div>
   </div>
   <div class="sum"><span class="w" id="what"></span><b id="sum">—</b><p class="hint" id="brk"></p><p class="err" id="err" role="alert"></p>
-   <a class="btn" id="send" href="#" target="_blank" rel="noopener" aria-disabled="true"></a><div class="dn" id="dn" hidden></div>
+   <a class="btn" id="send" href="#" target="_blank" rel="noopener" aria-disabled="true"></a>
    <details><summary>Текст заявки</summary><textarea id="msg" readonly aria-label="Текст заявки"></textarea><button class="copy" id="copy" type="button">Скопировать</button></details></div>
  </section>
 </div></div>
@@ -198,9 +198,9 @@ function update(){
   let u=null;if(!err){u=tg()?"https://t.me/"+tg()+"?text="+encodeURIComponent(text):"#";}
   setSend(u);
 }
-function setSend(u){const a=$("send");a.textContent=tg()?_t("Отправить заявку в Telegram"):_t("Оформить заказ");if(tg())a.target="_blank";else a.removeAttribute("target");a.href=u||"#";a.setAttribute("aria-disabled",u?"false":"true");}
-["addr","date","time","hours","zone","cm","cname","phone"].forEach(id=>$(id).addEventListener("input",()=>{$("dn").hidden=true;update();}));
-$("send").addEventListener("click",e=>{if(!tg()){e.preventDefault();if($("send").getAttribute("aria-disabled")!=="true"){$("copy").click();const d=$("dn");d.textContent=_t("Заявка оформлена. Текст заявки скопирован.");d.hidden=false;}}});
+function setSend(u){const a=$("send");a.textContent=_t("Оформить заказ");if(tg())a.target="_blank";else a.removeAttribute("target");a.href=u||"#";a.setAttribute("aria-disabled",u?"false":"true");}
+["addr","date","time","hours","zone","cm","cname","phone"].forEach(id=>$(id).addEventListener("input",update));
+$("send").addEventListener("click",e=>{if(!tg())e.preventDefault();});
 $("copy").onclick=async()=>{const t=$("msg").value;try{await navigator.clipboard.writeText(t);$("copy").textContent=_t("Скопировано");}catch(e){$("msg").select();$("copy").textContent=_t("Выделено, скопируйте вручную");}setTimeout(()=>$("copy").textContent=_t("Скопировать"),2000);};
 function renderContacts(){["contactTop","contactHero","fc"].forEach(id=>contact($(id)));}
 /* ---------- owner ---------- */
